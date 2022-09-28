@@ -8,6 +8,7 @@ import ImagesSlider from '../../utils/ImagesSlider';
 import CheckBox from './Sections/CheckBox';
 import { continents, price } from './Sections/Datas'
 import Radiobox from './Sections/RadioBox';
+import SearchFeature from './Sections/SearchFeature';
 
 
 function LandingPage() {
@@ -20,6 +21,7 @@ function LandingPage() {
         continents: [],
         price: []
     })
+    const [SearchTerm, setSearchTerm] = useState("")
 
     useEffect(() => {
 
@@ -73,7 +75,7 @@ function LandingPage() {
         return <Col lg={6} md={8} xs={24}  key={index}>
 
             <Card
-                cover={<ImagesSlider images={product.images} />}
+                cover={<a href={`/product/${product._id}`}> <ImagesSlider images={product.images} /></a>}
             >
                 <Meta
                     title={product.title}
@@ -126,11 +128,25 @@ function LandingPage() {
         setFilters(newFilters)
     }
 
+    const updateSearchTerm = (newSearchTerm) => {
+
+        let body = {
+            skip: 0,
+            limit: Limit,
+            filters: Filters,
+            searchTerm: newSearchTerm
+        }
+
+        setSkip(0)
+        setSearchTerm(newSearchTerm)
+        getProducts(body)
+    }
+
    
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
-                <h2>Let's Travel Anywhere <Icon type="rocket" /></h2>
+                <h2>유기동물 공고 보기<Icon type="rocket" /></h2>
             </div>
 
             {/* Filter */}
@@ -150,6 +166,11 @@ function LandingPage() {
 
 
             {/* Search */}
+            <div style={{ display:'flex', justifyContent: 'flex-end', margin: '1rem auto'}}>
+                <SearchFeature 
+                    refreshFuntion={updateSearchTerm}
+                />
+            </div>
 
             {/* Cards */}
 

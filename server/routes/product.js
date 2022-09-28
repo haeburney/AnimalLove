@@ -54,6 +54,7 @@ router.post('/products', (req, res) => {
 
   let limit = req.body.limit ? parseInt(req.body.limit) : 20; //숫자는 마음대로
   let skip = req.body.skip ? parseInt(req.body.skip) : 0;
+  let term = req.body.searchTerm
 
   let findArgs = {}; // object 정의 
 
@@ -78,22 +79,65 @@ router.post('/products', (req, res) => {
 
   console.log('findArgs', findArgs)
 
-
-  Product.find(findArgs)
-    .populate("writer") // 상품을 누가 등록했는지에 대한 정보 
-    .skip(skip) // 몽고 디비에 알려주는 것 8개만 가져와
-    .limit(limit) // 0~8번째까지만 가져와~
-    .exec((err, productInfo) => {
-      if(err) return res.status(400).json({ success: false, err})
-      return res.status(200).json({ 
-        success: true, productInfo,
-        postSize: productInfo.length
+  if (term) {
+    Product.find(findArgs)
+      .find({ $text: { $search: term } }) // text 검색으로 -> 몽고 DB 
+      .populate("writer") // 상품을 누가 등록했는지에 대한 정보 
+      .skip(skip) // 몽고 디비에 알려주는 것 8개만 가져와
+      .limit(limit) // 0~8번째까지만 가져와~
+      .exec((err, productInfo) => {
+        if (err) return res.status(400).json({ success: false, err })
+        return res.status(200).json({
+          success: true, productInfo,
+          postSize: productInfo.length
+        })
       })
-    })
+  } else {
+    Product.find(findArgs)
+      .populate("writer") // 상품을 누가 등록했는지에 대한 정보 
+      .skip(skip) // 몽고 디비에 알려주는 것 8개만 가져와
+      .limit(limit) // 0~8번째까지만 가져와~
+      .exec((err, productInfo) => {
+        if (err) return res.status(400).json({ success: false, err })
+        return res.status(200).json({
+          success: true, productInfo,
+          postSize: productInfo.length
+        })
+      })
+  }
+
+
 
 })
 
 
+router.get("/products_by_id", (req, res) => {
+ 
+
+  let type = req.query.type
+  let productIds = req.query.id
+
+  if( type === "array" ) {
+    // id = 39482, 19284, 49584 이거를
+    // productIds = ['39482', '19284', '49584'] 이런 식으로 바꿔준다. 
+    let ids = req.query.id.split(',')
+    productIds = ids.map(item => {
+      return item
+    })
+  }
+
+   // productId를 이용해서 DB에서 productId와 같은 상품의 정보를 가져온다.
+
+  Product.find({ _id: { $in: productIds } })
+    .populate('writer')
+    .exec((err, product) => {
+      if (err) return res.status(400).send(err)
+      return res.status(200).send(product)
+    })
+})
+
+
+//axios.get(`/api/product/products_by_id?id=${productId}&type=single`)
 
 
 module.exports = router;

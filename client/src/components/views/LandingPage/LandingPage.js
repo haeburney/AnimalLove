@@ -79,7 +79,7 @@ function LandingPage() {
             >
                 <Meta
                     title={product.title}
-                    description={`$${product.price}`}
+                    description={`공고마감일${product.price}`}
                 />
             </Card>
         </Col>

@@ -1,31 +1,47 @@
 const continents = [
     { 
         "_id": 1,
-        "name": "Africa"
+        "name": "서울"
     },
     {
         "_id": 2,
-        "name": "Europe"
+        "name": "경기도"
     },
     {
         "_id": 3,
-        "name": "Asia"
+        "name": "대전"
     },
     {
         "_id": 4,
-        "name": "North America"
+        "name": "강원도"
     },
     {
         "_id": 5,
-        "name": "South America"
+        "name": "인천"
     },
     {
         "_id": 6,
-        "name": "Australia"
+        "name": "충청도"
     },
     {
         "_id": 7,
-        "name": "Antarctica"
+        "name": "전라도"
+    },
+    {
+        "_id": 8,
+        "name": "경상도"
+    },
+    {
+        "_id": 9,
+        "name": "울산"
+    },
+    {
+        "_id": 10,
+        "name": "부산"
+    },
+    {
+        "_id": 11,
+        "name": "제주도"
     },
 ]
 

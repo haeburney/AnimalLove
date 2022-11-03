@@ -18,8 +18,8 @@ function UserCardBlock(props) {
                     <img style={{ width: '70px' }} alt="product" 
                     src={renderCartImage(product.images)} />
                 </td>
-                <td> {product.quantity} EA </td>
-                <td>   $ {product.price}   </td>
+                <td> {product.quantity}  </td>
+                <td>   {product.price}   </td>
                 <td>
                     <button onClick={() => props.removeItem(product._id)}>
                         Remove 
@@ -34,9 +34,9 @@ function UserCardBlock(props) {
             <table>
                 <thead>
                     <tr>
-                        <th>Product Image</th>
-                        <th>Product Quantity</th>
-                        <th>Product Price</th>
+                        <th>Animal Image</th>
+                        <th>Age</th>
+                        <th>End Day</th>
                         <th>Remove from Cart</th>
                     </tr>
                 </thead>

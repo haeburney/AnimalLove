@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AnimalLove/static/css/main.eecb5d15.chunk.css",
-    "main.js": "/AnimalLove/static/js/main.6b17cf20.chunk.js",
-    "main.js.map": "/AnimalLove/static/js/main.6b17cf20.chunk.js.map",
+    "main.js": "/AnimalLove/static/js/main.2d2894c8.chunk.js",
+    "main.js.map": "/AnimalLove/static/js/main.2d2894c8.chunk.js.map",
     "runtime-main.js": "/AnimalLove/static/js/runtime-main.84e98bd6.js",
     "runtime-main.js.map": "/AnimalLove/static/js/runtime-main.84e98bd6.js.map",
     "static/css/2.40e60438.chunk.css": "/AnimalLove/static/css/2.40e60438.chunk.css",
     "static/js/2.4f886488.chunk.js": "/AnimalLove/static/js/2.4f886488.chunk.js",
     "static/js/2.4f886488.chunk.js.map": "/AnimalLove/static/js/2.4f886488.chunk.js.map",
     "index.html": "/AnimalLove/index.html",
-    "precache-manifest.50132670e3d5128261ad71b23fb749b7.js": "/AnimalLove/precache-manifest.50132670e3d5128261ad71b23fb749b7.js",
+    "precache-manifest.bdcc4b472f38968f4d62555ff72f3ae2.js": "/AnimalLove/precache-manifest.bdcc4b472f38968f4d62555ff72f3ae2.js",
     "service-worker.js": "/AnimalLove/service-worker.js",
     "static/css/2.40e60438.chunk.css.map": "/AnimalLove/static/css/2.40e60438.chunk.css.map",
     "static/css/main.eecb5d15.chunk.css.map": "/AnimalLove/static/css/main.eecb5d15.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.40e60438.chunk.css",
     "static/js/2.4f886488.chunk.js",
     "static/css/main.eecb5d15.chunk.css",
-    "static/js/main.6b17cf20.chunk.js"
+    "static/js/main.2d2894c8.chunk.js"
   ]
 }

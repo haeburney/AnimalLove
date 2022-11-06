@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e74def05d3640c9a1cfc88a3e59f90ab",
+    "revision": "529135cb03160e75d223bc1d908f20bd",
     "url": "/AnimalLove/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AnimalLove/static/css/2.40e60438.chunk.css"
   },
   {
-    "revision": "2cad683fe58da60768a7",
+    "revision": "8422d09de221a8b662b5",
     "url": "/AnimalLove/static/css/main.eecb5d15.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AnimalLove/static/js/2.4f886488.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2cad683fe58da60768a7",
-    "url": "/AnimalLove/static/js/main.6b17cf20.chunk.js"
+    "revision": "8422d09de221a8b662b5",
+    "url": "/AnimalLove/static/js/main.2d2894c8.chunk.js"
   },
   {
     "revision": "32b902b6eca499ed1f7b",

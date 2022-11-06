@@ -5,21 +5,20 @@ const MenuItemGroup = Menu.ItemGroup;
 
 function LeftMenu(props) {
   return (
-    <Menu mode={props.mode}>
-    <Menu.Item>
-      <a href="/">HOME</a>
-    </Menu.Item>  
+    <Menu mode={props.mode}> 
     <Menu.Item key="mail">
       <a href="/writing">게시글</a>
     </Menu.Item>
     <Menu.Item>
-      <a href="/animal">공고 보기</a>
+      <a href="/">공고 보기</a>
     </Menu.Item>
       <SubMenu title={<span>메뉴</span>}>
         <Menu.Item key="setting:1">
-          <a href="/test">반려동물 테스트</a>
+          <a href="https://haeburney.github.io/MyPetTest/" target='_blank'>반려동물 테스트</a>
         </Menu.Item>
-        <Menu.Item key="setting:2">준비중 ... </Menu.Item>
+        <Menu.Item key="setting:2">
+          <a href="https://haeburney.github.io/tensorflow_test/" target='_black'>사진으로 검색</a>
+        </Menu.Item>
         {/* <MenuItemGroup title="Item 1">
         <Menu.Item key="setting:1">Option 1</Menu.Item>
         <Menu.Item key="setting:2">Option 2</Menu.Item>

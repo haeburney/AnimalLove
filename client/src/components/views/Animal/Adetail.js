@@ -34,7 +34,6 @@ function Adetail() {
                     {animal.kindCd}  {animal.colorCd}
                 </li>)}
 
-            시발아 아무거나좀 떠라
         </div>
 
     );

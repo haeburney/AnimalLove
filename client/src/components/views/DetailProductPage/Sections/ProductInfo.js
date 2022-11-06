@@ -19,7 +19,7 @@ function ProductInfo(props) {
 
 
     // 지도 여기부터
-    const { kakao } = window;
+   /*  const { kakao } = window;
     const [info, setInfo] = useState()
     const [markers, setMarkers] = useState([])
     const [map, setMap] = useState()
@@ -58,17 +58,17 @@ function ProductInfo(props) {
             }
         })
     }, [map])
-
+ */
 
     // 지도 여기까지
 
 
     return (
         <div>
-            <Descriptions title="유기 동물 정보">
-                <Descriptions.Item label="공고마감일">{props.detail.price}</Descriptions.Item>
-                <Descriptions.Item label="나이">{props.detail.sold}</Descriptions.Item>
-                <Descriptions.Item label="View">{props.detail.views}</Descriptions.Item>
+            <Descriptions title="글 정보">
+                {/* <Descriptions.Item label="공고마감일">{props.detail.price}</Descriptions.Item>
+                <Descriptions.Item label="나이">{props.detail.sold}</Descriptions.Item> */}
+                {/* <Descriptions.Item label="View">{props.detail.views}</Descriptions.Item> */}
                 <Descriptions.Item label="설명">{props.detail.description}</Descriptions.Item>
 
             </Descriptions>
@@ -84,7 +84,7 @@ function ProductInfo(props) {
             <br />
             <br />
 
-            <Map // 로드뷰를 표시할 Container
+           {/*  <Map // 로드뷰를 표시할 Container
                 center={{
                     lat: 37.566826,
                     lng: 126.9786567,
@@ -107,7 +107,7 @@ function ProductInfo(props) {
                         )}
                     </MapMarker>
                 ))}
-            </Map>
+            </Map> */}
 
         </div>
     )

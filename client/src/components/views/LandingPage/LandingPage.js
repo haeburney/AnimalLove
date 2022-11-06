@@ -79,7 +79,8 @@ function LandingPage() {
             >
                 <Meta
                     title={product.title}
-                    description={`공고마감일${product.price}`}
+                
+                  /*   description={{product.description}.slick} */
                 />
             </Card>
         </Col>
@@ -146,7 +147,7 @@ function LandingPage() {
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
-                <h2>유기동물 공고 보기<Icon type="rocket" /></h2>
+                <h2>우리들의 게시물 보기 <Icon type="message" /> </h2>
             </div>
 
             {/* Filter */}

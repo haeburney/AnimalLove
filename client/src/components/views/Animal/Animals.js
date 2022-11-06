@@ -10,7 +10,7 @@ function Animals() {
             await fetch(
                 /* `http://apis.data.go.kr/1543061/abandonmentPublicSrvc/abandonmentPublic?bgnde=20220101&endde=20221130&pageNo=1&numOfRows=999&_type=json&serviceKey=7LL6m%2F9hLy1EGblVbDDPEBNdFCl6m9Ft%2Fmw2b5wuTaAq2IuINWejMUw46typtDua4NacB9UfALipcKcnoK4PJw%3D%3D`
                  */
-                `http://apis.data.go.kr/1543061/abandonmentPublicSrvc/abandonmentPublic?bgnde=20220101&endde=20221130&pageNo=1&numOfRows=50&_type=json&serviceKey=7LL6m%2F9hLy1EGblVbDDPEBNdFCl6m9Ft%2Fmw2b5wuTaAq2IuINWejMUw46typtDua4NacB9UfALipcKcnoK4PJw%3D%3D`
+                `http://apis.data.go.kr/1543061/abandonmentPublicSrvc/abandonmentPublic?bgnde=20220101&endde=20221130&pageNo=1&numOfRows=500&_type=json&serviceKey=7LL6m%2F9hLy1EGblVbDDPEBNdFCl6m9Ft%2Fmw2b5wuTaAq2IuINWejMUw46typtDua4NacB9UfALipcKcnoK4PJw%3D%3D`
             )).json();
         setAnimal(json.response.body.items.item);
         setLoading(false);
@@ -43,6 +43,7 @@ function Animals() {
                         sexCd={animal.sexCd}
                         special={animal.specialMark}
                         weight={animal.weight}
+                        careAddr={animal.careAddr}
                     />
                 )
                 )}</div>)
